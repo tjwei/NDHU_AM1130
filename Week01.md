@@ -1,4 +1,5 @@
 # 介紹
+# github.com/tjwei/NDHUAM2017
 
 ## 目標
 * Python 語言及程式設計能力

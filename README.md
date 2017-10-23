@@ -6,6 +6,6 @@
 * [Week03](Week03/): 函數
 * [Week05](Week05.ipynb): 使用 List 
 * [Week06](Week06.ipynb): module and class
-* Week07: Pillow, numpy 畫圖
-* Week08: Facebook API
+* Week07: Pillow, numpy 畫圖 (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
+* Week08: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
 * Week09: Review

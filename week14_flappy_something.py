@@ -12,11 +12,13 @@ for i in range(1, 9):
     birds.append(bird)
     
 bird_x = width//2-140
-bird_y = height//2
+bird_y0 = height//2
 running = True
-i = 0
+i0 = i = 0
+
 while running:       
     screen.fill((0,0,0))
+    bird_y = (i-i0-9)**2/2 + bird_y0 - 30
     screen.blit(birds[abs( (i//3)%15-7)], (bird_x, bird_y ))
     pygame.display.flip()
     sleep(1./30)
@@ -24,5 +26,8 @@ while running:
         if event.type == pygame.QUIT:
             pygame.quit()
             running = False
+        if event.type == pygame.KEYDOWN:
+            bird_y0 = bird_y
+            i0 = i
     i+=1
 pygame.quit()

@@ -7,3 +7,6 @@
 
 Document:
 * https://www.pygame.org/docs/
+
+Flappy Turtle:
+* https://github.com/tjwei/Flappy-Turtle

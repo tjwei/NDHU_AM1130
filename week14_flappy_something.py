@@ -27,7 +27,13 @@ while running:
             pygame.quit()
             running = False
         if event.type == pygame.KEYDOWN:
-            bird_y0 = bird_y
-            i0 = i
+            if event.key == pygame.K_SPACE:
+                bird_y0 = bird_y
+                i0 = i
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                running = False
+
+            
     i+=1
 pygame.quit()

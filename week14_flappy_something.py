@@ -24,17 +24,21 @@ pipe_n = 0
 while running:       
     screen.fill((0,0,0))
     pipe_x = width* (1 - i / 150.)
+    bird_y = (i-i0-9)**2/2 + bird_y0 - 30
     for j in range(10):
-        screen.blit( pipe_top, ( pipe_x+ (j+pipe_n)*width/3, pipes[j][0]-400) )
-        screen.blit( pipe_bottom, ( pipe_x+ (j+pipe_n)*width/3, pipes[j][0]) )
+        this_y = pipes[j][0]
+        this_x = pipe_x+ (j+pipe_n)*width/3
+        screen.blit( pipe_top, ( this_x, this_y-400) )
+        screen.blit( pipe_bottom, ( this_x, this_y) )
+        if  this_x-30 < bird_x < this_x+30:
+            if not (this_y-100 < bird_y< this_y-30):
+                running=False
+        
     if pipe_x+ pipe_n*width/3 < -width/3:
         pipes.pop(0)
         pipes.append((random.randint(200, 600), ))
         pipe_n += 1
-            
-            
-    
-    bird_y = (i-i0-9)**2/2 + bird_y0 - 30
+                    
     screen.blit(birds[abs( (i//3)%15-7)], (bird_x, bird_y ))
     pygame.display.flip()
     sleep(1./30)

@@ -5,6 +5,8 @@ import random
 pygame.init()
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
+pygame.font.init() 
+myfont = pygame.font.SysFont("comicsansms", 80)
 birds = []
 for i in range(1, 9):
     #bird = pygame.image.load(r"C:\Users\tjw\Pictures\frame-%d.png"%i)
@@ -38,7 +40,9 @@ while running:
         pipes.pop(0)
         pipes.append((random.randint(200, 600), ))
         pipe_n += 1
-                    
+    textsurface = myfont.render('%d'%pipe_n, False, (255, 255, 155))
+    
+    screen.blit(textsurface, (0,0))
     screen.blit(birds[abs( (i//3)%15-7)], (bird_x, bird_y ))
     pygame.display.flip()
     sleep(1./30)

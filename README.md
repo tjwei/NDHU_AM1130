@@ -12,5 +12,9 @@
 * Week10: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
 
 
+如果 ipynb 檔案無法線上看到, 可以使用
+
+
+https://nbviewer.jupyter.org/github/tjwei/NDHUAM2017/tree/master/
 
 Azure notebook https://notebooks.azure.com/tjwei/libraries/NDHUAM2017

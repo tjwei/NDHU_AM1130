@@ -11,3 +11,6 @@
 * Week09: Review (機器學習簡介參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week02 )
 * Week10: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
 
+
+
+Azure notebook https://notebooks.azure.com/tjwei/libraries/NDHUAM2017

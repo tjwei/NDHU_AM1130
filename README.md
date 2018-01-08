@@ -12,7 +12,7 @@
 * Week10: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
 * Week17: Micro:bit
     * http://python.microbit.org/v/1
-    * https://microbit-micropython.readthedocs.io/en/0.9/index.html
+    * http://microbit-micropython.readthedocs.io/en/latest/index.html
     * https://codewith.mu/
     * https://github.com/carlosperate/awesome-microbit
     * radio: http://microbit-micropython.readthedocs.io/en/latest/tutorials/radio.html

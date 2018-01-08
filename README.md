@@ -10,10 +10,11 @@
 * Week08: numpy more (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
 * Week09: Review (機器學習簡介參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week02 )
 * Week10: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
-* Week17: 
+* Week17: Micro:bit
     * http://python.microbit.org/v/1
     * https://microbit-micropython.readthedocs.io/en/0.9/index.html
     * https://codewith.mu/
+    * https://github.com/carlosperate/awesome-microbit
     
 
 如果 ipynb 檔案無法線上看到, 可以使用

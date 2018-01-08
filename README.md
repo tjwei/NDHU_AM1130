@@ -15,6 +15,7 @@
     * https://microbit-micropython.readthedocs.io/en/0.9/index.html
     * https://codewith.mu/
     * https://github.com/carlosperate/awesome-microbit
+    * radio: http://microbit-micropython.readthedocs.io/en/latest/tutorials/radio.html
     
 
 如果 ipynb 檔案無法線上看到, 可以使用

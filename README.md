@@ -13,6 +13,8 @@
 * Week17: 
     * http://python.microbit.org/v/1
     * https://microbit-micropython.readthedocs.io/en/0.9/index.html
+    * https://codewith.mu/
+    
 
 如果 ipynb 檔案無法線上看到, 可以使用
 

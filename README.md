@@ -1,17 +1,19 @@
 # NDHU AM1130 軟體實作與計算實驗 2018
 東華應數軟體實作 2018
 
-* [簡介](Week01.md): 簡介
+* [簡介](Intro.md): 簡介
 * 前四週 Python 程式語言
     * [控制流程語法] https://www.youtube.com/watch?v=rdzbJFXsM90&feature=youtu.be
-    * [函數](Week03/)
-    * [使用 List](Week05.ipynb):  
-    * [module and class](Week06.ipynb): 
-* Week07: Pillow, numpy 畫圖 (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
-* Week08: numpy more (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
-* Week09: Review (機器學習簡介參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week02 )
-* Week10: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
-* Week17: Micro:bit
+    * [函數](Function/)
+    * [使用 List](List.ipynb):  
+    * [module and class](Module_and_Class.ipynb): 
+* Week05: 上機測驗
+* Week06-08: Numpy
+    * Pillow, numpy 畫圖 (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
+    * numpy more (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )
+* Week09-11: 機器學習簡介參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week02 
+* Week12: Facebook API (參考 https://github.com/tjwei/HackNTU_Data_2017/tree/master/Week09 )
+* Micro:bit:
     * http://python.microbit.org/v/1
     * http://microbit-micropython.readthedocs.io/en/latest/index.html
     * https://codewith.mu/

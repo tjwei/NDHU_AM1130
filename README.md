@@ -7,6 +7,7 @@
     * [函數](Function/)
     * [使用 List](List.ipynb):  
     * [module and class](Module_and_Class.ipynb): 
+    * 登記 cscircles 的 guru 為 tjw 
 * Week05: 上機測驗
 * Week06-08: Numpy
     * Pillow, numpy 畫圖 (參考 https://github.com/tjwei/numpy_tutorial/tree/master/numpy )

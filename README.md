@@ -5,7 +5,7 @@
 * 前四週 Python 程式語言 [Python_Basic/](Python_Basic/)
     * [控制流程語法] https://www.youtube.com/watch?v=rdzbJFXsM90&feature=youtu.be
     * [函數](Python_Basic/Function/)
-    * [使用 List](List.ipynb):  
+    * [使用 List](Python_Basic/List.ipynb):  
     * [module and class](Python_Basic/Module_and_Class.ipynb): 
     * 登記 cscircles 的 guru 為 tjw 
 * Week05: 上機測驗

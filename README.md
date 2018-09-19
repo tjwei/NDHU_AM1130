@@ -2,11 +2,11 @@
 東華應數軟體實作 2018
 
 * [簡介](Intro.md): 簡介
-* 前四週 Python 程式語言
+* 前四週 Python 程式語言 [Python_Basic/](Python_Basic/)
     * [控制流程語法] https://www.youtube.com/watch?v=rdzbJFXsM90&feature=youtu.be
-    * [函數](Function/)
+    * [函數](Python_Basic/Function/)
     * [使用 List](List.ipynb):  
-    * [module and class](Module_and_Class.ipynb): 
+    * [module and class](Python_Basic/Module_and_Class.ipynb): 
     * 登記 cscircles 的 guru 為 tjw 
 * Week05: 上機測驗
 * Week06-08: Numpy

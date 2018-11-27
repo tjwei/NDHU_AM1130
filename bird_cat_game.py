@@ -6,6 +6,7 @@ size = width, height = 800, 600
 
 pygame.init()
 screen = pygame.display.set_mode(size)
+exp_effect = pygame.mixer.Sound('sfx_exp_odd7.wav')
 bird_imgs = []
 cat = pygame.image.load('Pictures\\cat_white-32x32.png')
 for i in range(1, 5):
@@ -17,7 +18,7 @@ x_speed = 0
 y_speed = 0
 ticks0 = pygame.time.get_ticks()
 last_ticks = ticks0
-cat_numbers = 70
+cat_numbers = 50
 cat_positions = np.random.randint(0, 599, size=cat_numbers)
 cat_birthday = last_ticks+np.random.randint(0, 50, size=cat_numbers)*100
 font = pygame.font.Font(None, 60)
@@ -61,6 +62,7 @@ while 1:
             life -=1
             hit =True
     if hit:
+        exp_effect.play()
         pygame.draw.circle(screen, (255,0,0), 
                            (int(x)+20,int(y)+20),
                            20, 5)
@@ -76,7 +78,7 @@ while 1:
         text = font_big.render("Game Over", True, (255, 100, 100))
         screen.blit(text, (100,200))
         pygame.display.flip()
-        time.sleep(10)
+        time.sleep(5)
         pygame.quit()
         sys.exit()
         

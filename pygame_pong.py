@@ -30,15 +30,24 @@ class Item:
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+font_score = pygame.font.Font(None, 140)
+hit_effect = pygame.mixer.Sound('sfx_exp_odd7.wav')
+dead_effect = pygame.mixer.Sound('sfx_exp_odd2.wav')
 
-ball = Item(400, 300, 10, 1, 1)
+
+
+
+ball = Item(400, 300, 10, random.choice([-1, 1]), random.uniform(-1,1))
 board = Item(700, 300, 60, 0, 0)
 enemy = Item(100, 300, 60, 0, 0)
 
 
 ticks0 = pygame.time.get_ticks()
 last_ticks = ticks0
+score = [0, 0]
+pause_ticks = 1000
 while True:
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -74,9 +83,7 @@ while True:
         enemy.y_speed = 1
     elif predict_y < enemy.y:
         enemy.y_speed = -1
-    
-    
-        
+            
     # 敵人位置更新
     x, y = enemy.next_pos(diff_ticks)
     if y > HEIGHT:
@@ -86,9 +93,7 @@ while True:
     enemy.x, enemy.y = x, y 
     
     x, y = ball.next_pos(diff_ticks)    
-    if y>=HEIGHT:
-        y = HEIGHT-1
-        ball.y_speed = -ball.y_speed
+
     # 玩家擊球判斷
     if board.x>=x>=board.x-5 and \
        board.y+board.r>=y>=board.y-board.r and \
@@ -96,6 +101,7 @@ while True:
         ball.x_speed=-ball.x_speed
         ball.y_speed = 1 if ball.y_speed>0 else -1
         ball.y_speed = ball.y_speed + (ball.y-board.y)/board.r
+        hit_effect.play()
         
     # 敵人擊球判斷
     if enemy.x<=x<=enemy.x+5 and \
@@ -104,17 +110,44 @@ while True:
         ball.x_speed=-ball.x_speed
         ball.y_speed = 1 if ball.y_speed>0 else -1
         ball.y_speed = ball.y_speed + (ball.y-enemy.y)/enemy.r
+        hit_effect.play()
+        
+    # 球的邊界判斷
     if x>=WIDTH:
-        x = WIDTH-1
-        ball.x_speed = -ball.x_speed
+        score[1]+=1        
+        ball = Item(400, 300, 10, -1, random.uniform(-1,1))
+        #x, y = ball.pos()
+        pause_ticks = 1000
+        dead_effect.play()
+        
+    if x<0:
+        score[0]+=1
+        ball = Item(400, 300, 10, 1, random.uniform(-1,1))
+        #x, y = ball.pos()
+        pause_ticks = 1000
+        dead_effect.play()
+        
+    if y>=HEIGHT:
+        y = HEIGHT-1
+        ball.y_speed = -ball.y_speed
     if y<=0:
         y = 0
         ball.y_speed = -ball.y_speed
-    if x<=0:
-        x = 0
-        ball.x_speed = -ball.x_speed
-    ball.x, ball.y = x, y
+    
+    if pause_ticks>0:
+        pause_ticks-=diff_ticks
+    else:
+        ball.x, ball.y = x, y
+    
+    # 清空螢幕 開始畫圖
     screen.fill((128,0,128))
+    # 印出分數
+    score1 = font_score.render("{:02d}".format(score[0]), True, (255, 170, 170))
+    score1_rect = score1.get_rect(center=(550, 100))
+    screen.blit(score1, score1_rect)
+    score2 = font_score.render("{:02d}".format(score[1]), True, (255, 170, 170))
+    score2_rect = score2.get_rect(center=(250, 100))
+    screen.blit(score2, score2_rect)
     pygame.draw.circle(screen, (0,255,0), ball.pos(), ball.r, 4)
     # 把玩家的板子畫出
     x, y = board.pos()    

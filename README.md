@@ -24,6 +24,7 @@
 
 如果 ipynb 檔案無法線上看到, 可以使用
 
+AWS 活動:   https://sys.ndhu.edu.tw/SA/XSL_ApplyRWD/ACTannounce.aspx?actid=1849
 
 https://nbviewer.jupyter.org/github/tjwei/NDHUAM2017/tree/master/
 

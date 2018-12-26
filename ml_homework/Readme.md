@@ -1,7 +1,7 @@
 這是機器學習的作業。 分成基本及影像兩個：
 
 ## 基本分類
-資料是 heart.csv,從個人資料來預測是否會有心臟疾病。
+資料是 https://raw.githubusercontent.com/tjwei/NDHU_AM1130/master/ml_homework/heart.csv ,從個人資料來預測是否會有心臟疾病。
 最後一欄 `target` 代表是否有疾病, 值為 `1` 或 `0` ，是我們想預測的目標
 
 前面的其他欄位說明如下：
